@@ -1,10 +1,10 @@
 {
-  "name": "x-route",
+  "name": "thunder-router",
   "version": "1.0.0",
   "description": "Simple or easy to make class base controller.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aashishpanchal/x-route.git"
+    "url": "https://github.com/aashishpanchal/thunder-router.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -16,14 +16,14 @@
   "directories": {
     "lib": "src"
   },
-  "homepage": "https://github.com/aashishpanchal/x-route#readme",
+  "homepage": "https://github.com/aashishpanchal/thunder-router#readme",
   "scripts": {
     "build": "rimraf dist && tsc",
     "formate": "prettier --write \"./**/*.{ts,tsx}\""
   },
   "keywords": [
     "router",
-    "x-route",
+    "thunder-router",
     "express-router",
     "express-helper"
   ],
