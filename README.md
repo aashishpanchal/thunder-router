@@ -1,4 +1,4 @@
-# @express-router
+# x-route
 
 > This package is intended for use with HTTP libraries that want to configure routes using **ESNext decorators**.
 
@@ -7,19 +7,19 @@
 With `npm`:
 
 ```
-npm install @express-router
+npm install x-route
 ```
 
 With `yarn`
 
 ```
-yarn add @express-router
+yarn add x-route
 ```
 
 With `pnpm`
 
 ```
-pnpm add @express-router
+pnpm add x-route
 ```
 
 # Example
@@ -28,7 +28,7 @@ The end-user of the routing library will be able to use decorators or set up the
 
 ```ts
 // You may re-export these as well.
-import { ApiRes, Controller, Get, GetOrPost, Post, UseAfter, UseBefore, ctx } from "@express-router";
+import { ApiRes, Controller, Get, GetOrPost, Post, UseAfter, UseBefore, ctx } from "x-route";
 
 @Controller("/news")
 @UseBefore(bodyParse(),...)
@@ -55,7 +55,7 @@ export default class NewsController {
 
 ```ts
 import express from "express";
-import { createRouter } from "@express-router";
+import { createRouter } from "x-route";
 import { UserController } from "./user.controller";
 
 const app = express();
@@ -70,7 +70,7 @@ app.listen(3000, () => console.log("Server Listen On 3000"));
 # Hom to make custom router
 
 ```ts
-import { Router } from "@express-router";
+import { Router } from "x-route";
 
 export const Curd = (...paths: string[]) =>
   Router(["GET", "POST", "PUT", "DELETE", "PATCH"], paths);
@@ -92,7 +92,7 @@ export const GetOrDelete = (...paths: string[]) =>
 ```ts
 import "reflect-metadata";
 import { Container, Service } from "typedi";
-import { makeRouter, wrapper } from "@express-router";
+import { makeRouter, wrapper } from "x-route";
 
 export const createRouter = (cls: any) => {
   const instance = Container.get(cls);
