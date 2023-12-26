@@ -9,7 +9,7 @@ export class HttpError extends Error {
   constructor(
     res: string | Record<string, any>,
     status: number,
-    message: string = "Failed"
+    message: string = "Failed",
   ) {
     super();
     this.statusCode = status;

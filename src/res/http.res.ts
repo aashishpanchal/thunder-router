@@ -9,7 +9,7 @@ export class HttpRes {
   constructor(
     data: any = {},
     status: number = 200,
-    message: string = "Success"
+    message: string = "Success",
   ) {
     this.statusCode = status;
     this.message = message;

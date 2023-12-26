@@ -16,7 +16,7 @@ const getHandler = (instance: any, key: string): Function => {
     throw new Error(
       `Function ${handler as string} is not found in ${
         instance.constructor.name
-      } class`
+      } class`,
     );
   return handler;
 };
@@ -34,7 +34,7 @@ export function createRouter<T>(constructor: Constructor<T>): Router {
  */
 export function makeRouter<T>(
   instance: Instance<T>,
-  asyncFunc: Function
+  asyncFunc: Function,
 ): Router {
   const router = Router();
   // get state, when set by decorators

@@ -1,9 +1,25 @@
 {
-  "name": "@express-router",
+  "name": "express-router",
   "version": "1.0.0",
   "description": "Simple or easy to make class base controller.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aashishpanchal/express-router.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "directories": {
+    "lib": "src"
+  },
+  "homepage": "https://github.com/aashishpanchal/express-router#readme",
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "formate": "prettier --write \"./**/*.{ts,tsx}\""
   },
   "keywords": [
     "router",
@@ -17,6 +33,7 @@
     "@types/express": "^4.17.21",
     "express": "^4.18.2",
     "http-status": "^1.7.3",
+    "prettier": "^3.1.1",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"

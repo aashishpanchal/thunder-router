@@ -16,14 +16,14 @@ import { addAfter, addBefore, addRoute, updateState } from "./state";
  */
 export function Router(
   method: Method | Methods,
-  paths?: string | string[]
+  paths?: string | string[],
 ): MethodDecorator {
   return (target: any, name: string) => {
     updateState(target, (state) =>
       addRoute(state, name, {
         method: Array.isArray(method) ? method : [method],
         paths: getPaths(paths),
-      })
+      }),
     );
   };
 }

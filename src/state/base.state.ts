@@ -44,7 +44,7 @@ export function setState(target: any, state: IRouterConfigState) {
  */
 export function updateState(
   target: any,
-  updater: (state: IRouterConfigState) => IRouterConfigState
+  updater: (state: IRouterConfigState) => IRouterConfigState,
 ) {
   setState(target, updater(getState(target)));
 }

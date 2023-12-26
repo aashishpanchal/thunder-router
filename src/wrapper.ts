@@ -6,7 +6,7 @@ import type { HttpHandler, ReqHandler } from "./interfaces";
  */
 export const wrapper = (
   func: ReqHandler,
-  instance: InstanceType<any>
+  instance: InstanceType<any>,
 ): HttpHandler => {
   return async (req, res, next) => {
     const ctx = { req, res, next };

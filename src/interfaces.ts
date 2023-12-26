@@ -11,7 +11,7 @@ export type ReqHandler = (ctx: ctx) => any;
 export type HttpHandler<Req = Request, Res = Response, Next = NextFunction> = (
   req: Req,
   res: Res,
-  next: Next
+  next: Next,
 ) => void;
 
 // constructor type

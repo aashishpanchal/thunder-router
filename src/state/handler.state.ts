@@ -15,7 +15,7 @@ export function addRoute(
   options: {
     paths: string[];
     method: Method[];
-  }
+  },
 ): IRouterConfigState {
   const config = state.methods.get(methodName);
   if (config) {
@@ -42,7 +42,7 @@ export function addRoute(
 export function addAfter(
   state: IRouterConfigState,
   name: null | string,
-  middleware: Middleware[]
+  middleware: Middleware[],
 ): IRouterConfigState {
   // if name is not null then add after to specific route
   if (name) {
@@ -70,7 +70,7 @@ export function addAfter(
 export function addBefore(
   state: IRouterConfigState,
   name: null | string,
-  middleware: Middleware[]
+  middleware: Middleware[],
 ): IRouterConfigState {
   // if name is not null then add before to specific route
   if (name) {
@@ -99,7 +99,7 @@ export function addBefore(
  * @param state
  */
 export function rollUpState(
-  state: IRouterConfigState
+  state: IRouterConfigState,
 ): Map<string, IRouteConfig> {
   const result = new Map<string, IRouteConfig>();
   state.methods.forEach((method, key) => {

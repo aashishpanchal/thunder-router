@@ -16,7 +16,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "outDir": "./build",
+    "outDir": "./dist",
     "baseUrl": "./"
   }
 }
