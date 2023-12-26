@@ -2,7 +2,7 @@ import httpStatus from "http-status";
 import { HttpRes } from "./http.res";
 
 export class ApiRes {
-  static serializer<T, V>(object: any, value: V) {
+  static serializer(object: any, value: any) {
     return value && object ? value : value;
   }
 

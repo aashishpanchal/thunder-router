@@ -23,7 +23,7 @@ export class HttpError extends Error {
   /**
    * check if error is instance of ApiError return true, else false
    */
-  static isApiError(error: any) {
+  static isHttpError(error: any) {
     return error instanceof HttpError;
   }
 }

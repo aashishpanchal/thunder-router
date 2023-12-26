@@ -8,7 +8,7 @@ export const STATE = Symbol("router-state");
 export function createState(): IRouterConfigState {
   const state: IRouterConfigState = {
     root: {
-      paths: "/",
+      paths: "",
       before: [],
       after: [],
     },

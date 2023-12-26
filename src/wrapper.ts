@@ -6,12 +6,12 @@ import type { HttpHandler, ReqHandler } from "./interfaces";
  */
 export const wrapper = (
   func: ReqHandler,
-  instance: InstanceType<any>,
+  instance?: InstanceType<any>,
 ): HttpHandler => {
   return async (req, res, next) => {
     const ctx = { req, res, next };
     // run promise
-    Promise.resolve(func.call(instance, ctx))
+    Promise.resolve(func.call(instance || {}, ctx))
       .then((value: HttpRes | any) => {
         if (HttpRes.isHttpRes(value)) res.status(value.statusCode).json(value);
         // check data if exist or not
