@@ -126,3 +126,4 @@ same in other ioc package.like typedi, tsyringe.
 # Author
 
 Aashish Panchal — [@aashish](https://twitter.com/aashish405)
+Kuldeep Trivedi — [@aashish](https://twitter.com/Trivedi329)
